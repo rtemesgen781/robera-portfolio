@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+	--ink: #17202a;
+	--muted: #5f6b76;
+	--paper: #f6f3ed;
+	--surface: #ffffff;
+	--blue: #1769aa;
+	--yellow: #f6c453;
+	--line: #d9d4ca;
+	--shadow: 0 14px 35px rgba(23, 32, 42, 0.1);
+}
+
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	color: var(--ink);
+	background: var(--paper);
+	font-family: 'DM Sans', sans-serif;
+	line-height: 1.7;
+}
+
+header {
+	padding: 4rem 1.5rem 2.5rem;
+	color: #fff;
+	text-align: center;
+	background: var(--blue);
+}
+
+header h1,
+h2,
+h3 {
+	margin-top: 0;
+	font-family: 'Space Grotesk', sans-serif;
+	line-height: 1.15;
+}
+
+header h1 {
+	margin-bottom: 0.5rem;
+	font-size: clamp(2.4rem, 7vw, 5rem);
+	letter-spacing: -0.04em;
+}
+
+header p {
+	margin: 0 0 1.5rem;
+	color: #dcecf8;
+	font-size: 1.1rem;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 0.25rem 1.1rem;
+}
+
+nav a,
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav a {
+	padding: 0.35rem 0;
+	color: #fff;
+	font-weight: 700;
+	border-bottom: 2px solid transparent;
+}
+
+nav a:hover,
+nav a:focus-visible {
+	border-color: var(--yellow);
+}
+
+hr {
+	display: none;
+}
+
+section {
+	max-width: 1080px;
+	margin: 0 auto;
+	padding: 5rem 1.5rem;
+}
+
+section h2 {
+	margin-bottom: 1rem;
+	color: var(--blue);
+	font-size: clamp(2rem, 4vw, 3rem);
+}
+
+section > p {
+	max-width: 720px;
+	color: var(--muted);
+}
+
+.hero {
+	display: grid;
+	min-height: 500px;
+	max-width: none;
+	place-items: center;
+	padding: 6rem 1.5rem;
+	background: linear-gradient(135deg, #fff 0%, #fff 65%, #f6c453 65%, #f6c453 100%);
+}
+
+.hero-content {
+	width: min(1080px, 100%);
+}
+
+.hero h2 {
+	max-width: 760px;
+	margin-bottom: 0.75rem;
+	color: var(--ink);
+	font-size: clamp(2.5rem, 7vw, 5.5rem);
+	letter-spacing: -0.05em;
+}
+
+.hero h3 {
+	color: var(--blue);
+	font-size: clamp(1.2rem, 2.5vw, 1.7rem);
+}
+
+.hero p {
+	max-width: 650px;
+	color: var(--muted);
+	font-size: 1.1rem;
+}
+
+.hero-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+	margin-top: 2rem;
+}
+
+.btn,
+.email-button,
+.project-link {
+	display: inline-block;
+	padding: 0.75rem 1.15rem;
+	color: var(--ink);
+	font-weight: 700;
+	border: 2px solid var(--ink);
+	transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+}
+
+.btn:first-child,
+.email-button {
+	color: #fff;
+	background: var(--blue);
+	border-color: var(--blue);
+}
+
+.btn:hover,
+.email-button:hover,
+.project-link:hover {
+	transform: translateY(-3px);
+	box-shadow: 5px 5px 0 var(--ink);
+}
+
+.skills-container,
+.projects-container,
+.goals-container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.25rem;
+	margin-top: 2rem;
+}
+
+.skill-card,
+.project-card,
+.goal-card,
+.contact-card {
+	padding: 1.5rem;
+	background: var(--surface);
+	border: 1px solid var(--line);
+	box-shadow: var(--shadow);
+}
+
+.skill-card h3,
+.project-card h3,
+.goal-card h3,
+.contact-card h3 {
+	margin-bottom: 0.65rem;
+	color: var(--blue);
+}
+
+.skill-card p,
+.project-card p,
+.goal-card p {
+	margin-bottom: 0;
+	color: var(--muted);
+}
+
+.project-link {
+	margin-top: 1rem;
+	color: var(--blue);
+	border-color: var(--blue);
+}
+
+.goals-container {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-card {
+	max-width: 680px;
+	margin-top: 2rem;
+	border-top: 5px solid var(--yellow);
+}
+
+.social-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	margin-top: 1.5rem;
+}
+
+.social-link {
+	color: var(--blue);
+	font-weight: 700;
+	border-bottom: 2px solid var(--yellow);
+}
+
+footer {
+	padding: 2rem 1.5rem;
+	color: #dcecf8;
+	text-align: center;
+	background: var(--ink);
+}
+
+@media (max-width: 760px) {
+	section {
+		padding: 3.5rem 1.25rem;
+	}
+
+	.hero {
+		min-height: 0;
+		padding: 4rem 1.25rem;
+		background: linear-gradient(145deg, #fff 0%, #fff 78%, #f6c453 78%, #f6c453 100%);
+	}
+
+	.skills-container,
+	.projects-container,
+	.goals-container {
+		grid-template-columns: 1fr;
+	}
+
+	.btn,
+	.email-button {
+		width: 100%;
+		text-align: center;
+	}
+}
